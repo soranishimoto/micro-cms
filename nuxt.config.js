@@ -30,7 +30,7 @@ export default {
   ** Global CSS
   */
   css: [
-    'ress'
+    '~/assets/scss/style.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -46,12 +46,21 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-webfontloader',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
   ],
+  webfontloader: {
+    google: {
+      families: ['Cabin:400','Spectral:400,800']
+    }
+  },
+  dotenv: {
+    path: process.cwd()
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -68,10 +77,10 @@ export default {
     extend (config, ctx) {
     }
   },
+  // .scssファイルをグローバルに読み込む
   styleResources: {
     scss: [
-      // '@/assets/scss/foundation/_config.scss',
-      // '@/assets/scss/foundation/_mixin.scss'
+      '~/assets/scss/_setting.scss'
     ]
   },
   // .env設定
@@ -83,7 +92,7 @@ export default {
   generate: {
     routes() {
       const demo = axios
-        .get('https://jtk.microcms.io/api/v1/demo', {
+        .get('https://soranishimoto.microcms.io/api/v1/gourmet', {
           headers: { 'X-API-KEY': process.env.API_KEY }
         })
         .then(res => {
