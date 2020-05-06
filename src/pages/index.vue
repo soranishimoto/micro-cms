@@ -3,7 +3,7 @@
     .c-container
      .intro
       h2.c-heading-h2 Fukuoka × Gourmet
-      p 福岡の美味しいグルメを紹介します。
+      p 福岡の美味しいグルメを紹介します👀💭
     .c-container
      .c-page-heading
       h2.c-heading-h2 Article
