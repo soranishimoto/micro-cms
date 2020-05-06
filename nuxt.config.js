@@ -46,12 +46,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-webfontloader',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
+    'nuxt-webfontloader',
   ],
   webfontloader: {
     google: {

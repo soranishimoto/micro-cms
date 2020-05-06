@@ -1,5 +1,5 @@
 <template lang="pug">
-  ul
+  ul.c-list-card-items
     Post(
       v-for="(post,index) in posts"
       :key="index"
@@ -39,11 +39,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul {
-  @include mq('min') {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -40px 0 0 -40px;
+.c-list-card-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px 0 0 -40px;
+  @include mq('max') {
+    margin: -10px 0 0 -10px;
   }
 }
 </style>
