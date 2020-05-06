@@ -23,12 +23,23 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import axios from 'axios'
 
 export default {
-  components: {
-    Logo
+	data () {
+    return {
+      meta: {
+        type: 'article'
+      },
+    }
+  },
+  head () {
+    return {
+      title: this.meta.title,
+      meta: [
+        { hid: 'og:type', property: 'og:type', content: this.meta.type }
+      ],
+    }
   },
   async asyncData( { params } ) {
     const { data } = await axios.get(

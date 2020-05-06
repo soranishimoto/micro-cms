@@ -5,6 +5,12 @@ const { API_KEY, API_URL } = process.env;
 // generate時にaxiosを使って詳細ページを生成
 const axios = require('axios')
 
+// meta設定
+const siteTitle = 'SORA.LOG'
+const siteDescription = 'グルメ紹介サイトSORA.LOG（ソラログ）。福岡の美味しいグルメを紹介します。'
+const siteUrl = process.env.SITE_URL
+const ogImage = `${siteUrl}/assets/img/ogp.png`
+
 export default {
   srcDir: 'src/',
   mode: 'universal',
@@ -12,11 +18,28 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
+    },
+    titleTemplate(title) {
+      return (title ? `${title} | ` : '') + 'SORA.LOG'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: siteDescription },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:site_name', content: siteTitle },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: siteUrl },
+      { hid: 'og:title', property: 'og:title', content: siteTitle },
+      { hid: 'og:description', property: 'og:description', content: siteDescription },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image:src', content: ogImage },
+      { hid: 'twitter:url', name: 'twitter:url', content: siteUrl },
+      { hid: 'twitter:title', name: 'twitter:title', content: siteTitle },
+      { hid: 'twitter:description', name: 'twitter:description', content: siteDescription }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
