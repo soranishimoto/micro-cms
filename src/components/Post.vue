@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 .c-list-card-item {
   @include mq('min') {
-   width: calc(100%/4 - 40px);
-   margin: 40px 0 0 40px;
+   width: calc(100%/4 - 20px);
+   margin: 20px 0 0 20px;
   }
   @include mq('max') {
     width: calc(100%/2 - 10px);

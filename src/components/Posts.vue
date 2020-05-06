@@ -42,7 +42,7 @@ export default {
 .c-list-card-items {
   display: flex;
   flex-wrap: wrap;
-  margin: -40px 0 0 -40px;
+  margin: -20px 0 0 -20px;
   @include mq('max') {
     margin: -10px 0 0 -10px;
   }

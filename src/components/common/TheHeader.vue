@@ -17,7 +17,8 @@
 		left: 0;
 		z-index: 9999;
 		width: 100%;
-		padding: 30px 0;
+		padding: 15px 0;
+		border-bottom: 1px solid #eee;
 		h1 {
 			font-size: 2.6rem;
 			font-weight: 800;
