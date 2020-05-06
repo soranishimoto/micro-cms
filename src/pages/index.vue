@@ -30,6 +30,9 @@ export default {
    box-shadow: 1px 4px 6px 0 rgba(0,0,0,0.1);
    border-radius: 5px;
    background: #fff;
+   .c-heading-h2 {
+    color: #C2371A;
+   }
    @include mq('max') {
     margin-bottom: 20px;
     padding: 20px;
