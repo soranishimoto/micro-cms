@@ -7,8 +7,13 @@
 </template>
 <style lang="scss" scoped>
 	.l-footer {
-		padding: 15px 0;
+		padding: 30px 0;
 		text-align: center;
+		color: #fff;
+		background: #191919;
+		 @include mq('max') {
+			padding: 15px 0;
+		}
 	}
 	.l-footer-credit {
 		display: block;

@@ -19,6 +19,7 @@
 		width: 100%;
 		padding: 15px 0;
 		border-bottom: 1px solid #eee;
+		background: #fff;
 		h1 {
 			font-size: 2.6rem;
 			font-weight: 800;
