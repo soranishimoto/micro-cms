@@ -15,8 +15,9 @@
           p.url
            a(:href="post.url" target="_blank" rel="noopener noreferrer" class="c-link-under-line") {{ post.url }}
         div.article-parts
-          figure.image
-            img(:src="post.image.url")
+          picture.image
+            source(:srcset="post.image.url+ '?fm=webp'", type="image/webp")
+            img(:src="post.image.url" :alt="'写真：' +post.name" width="1200" height="1200")
         div.c-button-area
           p.c-button
             nuxt-link(to="/" class="c-button-link") トップへ戻る

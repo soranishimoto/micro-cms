@@ -3,7 +3,7 @@
     .c-container
      .intro
       h2.c-heading-h2 Fukuoka × Gourmet
-      p 福岡（天神・大名・博多・今泉…etc）には美味しいグルメがたくさんあります。<br>SORA.LOG（ソラログ）ではこれまで行ったお店の中からおすすめできるスポットについてご紹介したいと思います#[span.emoji 😎📷]
+      p 福岡（天神・大名・博多・今泉…etc）には美味しいグルメがたくさんあります。<br>ソラログではこれまで行ったお店の中からおすすめできるスポットについてご紹介したいと思います#[span.emoji 😎📷]
     .c-container
      .c-page-heading
       h2.c-heading-h2 Article

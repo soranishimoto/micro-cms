@@ -1,8 +1,9 @@
 <template lang="pug">
   li.c-list-card-item
     nuxt-link(:to="`/posts/${post.id}/`" class="c-list-card-link")
-      figure.c-list-card-image
-        img(:src="post.image.url" :alt="post.name")
+      picture.c-list-card-image
+            source(:srcset="post.image.url+ '?fm=webp'", type="image/webp")
+            img(:src="post.image.url" :alt="'写真：' +post.name" width="1200" height="1200")
       p.c-list-card-name {{ post.name }}
 </template>
 
